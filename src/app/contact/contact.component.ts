@@ -15,13 +15,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const getData = ajax('http://localhost/v1/api/chat');
-
-    // getApiToken.subscribe(response => {
-    //   this.apiToken = response.response;
-    //   console.log(this.apiToken);
-    // });
-
+    const getData = ajax('https://www.stevenprine.com/v1/api/chat');
 
     getData.subscribe(response => {
        this.data = response.response;
