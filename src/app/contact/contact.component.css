@@ -1,0 +1,11 @@
+.textBox {
+    flex-direction: column-reverse;
+    overflow-y: scroll; 
+    max-height: 450px;
+    overflow: auto;
+}
+
+.chatBadges {
+    width: 6rem;
+}
+
