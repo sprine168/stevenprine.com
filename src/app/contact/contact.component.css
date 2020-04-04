@@ -4,7 +4,6 @@
     max-height: 450px;
     overflow: auto;
     min-height: 450px;
-    width: 350px;
 }
 
 .time {
@@ -14,5 +13,3 @@
     margin-right: 15px;
     color: royalblue;
 }
-
-

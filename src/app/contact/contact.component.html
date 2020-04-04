@@ -1,21 +1,27 @@
-<section class="m-5 bg-light textBox" *ngFor="let posts of data">
+<main class="container">
 
-    <!-- Chat Name Badges -->
-    <p class="badge badge-secondary headingFont m-2">
-        {{ posts.Name }}
-    </p>
+    <section class="row">
 
-    <!-- Chat text people enter -->
-    <p class="ml-3 direction">{{ posts.Chat }}</p>
-    <div class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</div>
+        <div class="col-sm-3 bg-light textBox" *ngFor="let posts of data">
 
-        <!-- Chat Name Badges -->
-        <p class="badge badge-secondary headingFont m-2">
-            {{ posts.Name }}
-        </p>
-    
-        <!-- Chat text people enter -->
-        <p class="ml-3 direction">{{ posts.Chat }}</p>
-        <div class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</div>
+            <!-- Chat Name Badges -->
+            <p class="badge badge-secondary p-2 m-2">
+                {{ posts.Name }}
+            </p>
 
-</section>
+            <!-- Chat text people enter -->
+            <p class="ml-3 direction">{{ posts.Chat }}</p>
+            <p class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</p>
+
+        </div>
+
+        <div class="bg-light textBox col-sm-7 offset-sm-2" *ngFor="let posts of data">
+
+            <h1 class="text-info text-center mt-2">Contact me here section coming soon!!</h1>
+
+
+        </div>
+
+    </section>
+
+</main>
