@@ -19,10 +19,7 @@ export class ContactComponent implements OnInit {
 
     getData.subscribe(response => {
        this.data = response.response;
-       console.log(response.status);
-       console.log(this.data);
     });
-
 
   }
 

@@ -17,12 +17,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutComponent,
     ContactComponent,
     ProjectComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     NgbModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
