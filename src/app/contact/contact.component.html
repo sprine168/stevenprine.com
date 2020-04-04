@@ -1,23 +1,11 @@
-<!-- TextArea section for outputting live text -->
-<section class="container bg-dark mt-5">
+<section class="m-5 bg-light textBox" *ngFor="let posts of data">
 
-    <div class="col-5 bg-light textBox ">
-        
-        <div class="row ml-1" *ngFor="let posts of data">
+    <!-- Chat Name Badges -->
+    <p class="badge badge-secondary headingFont m-2">
+        {{ posts.Name }}
+    </p>
 
-            <!-- Chat Name Badges -->
-            <div class="text-center badge badge-dark text-wrap mt-3 p-2 chatBadges direction">
-                {{ posts.Name }}
-            </div>
-            
-            <!-- Chat text people enter -->
-            <p class="ml-3 mt-2 direction" >{{ posts.Chat }} </p>
-        </div>
-
-    </div>
-
-    <div class="col-7">
-
-    </div>
+    <!-- Chat text people enter -->
+    <p class="ml-3 direction">{{ posts.Chat }} </p>  
 
 </section>
