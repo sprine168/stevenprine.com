@@ -6,6 +6,16 @@
     </p>
 
     <!-- Chat text people enter -->
-    <p class="ml-3 direction">{{ posts.Chat }} </p>  
+    <p class="ml-3 direction">{{ posts.Chat }}</p>
+    <div class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</div>
+
+        <!-- Chat Name Badges -->
+        <p class="badge badge-secondary headingFont m-2">
+            {{ posts.Name }}
+        </p>
+    
+        <!-- Chat text people enter -->
+        <p class="ml-3 direction">{{ posts.Chat }}</p>
+        <div class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</div>
 
 </section>
