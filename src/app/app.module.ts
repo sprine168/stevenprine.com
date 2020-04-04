@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ChatFormComponent } from './contact/chat-form/chat-form.component';
+import { LiveChatFormComponent } from './contact/live-chat-form/live-chat-form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactComponent,
     ProjectComponent,
     PageNotFoundComponent,
+    ChatFormComponent,
+    LiveChatFormComponent,
   ],
   imports: [
     NgbModule,

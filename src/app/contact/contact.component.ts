@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ajax } from 'rxjs/ajax';
 
+// Sub module imports
+import { ChatFormComponent } from './chat-form/chat-form.component';
+import { LiveChatFormComponent } from './live-chat-form/live-chat-form.component';
+
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

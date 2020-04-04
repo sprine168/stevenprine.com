@@ -15,12 +15,13 @@
                 <p class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</p>
             </div>
 
+            <app-live-chat-form class="fixed-bottom"></app-live-chat-form>
+
         </article>
 
         <article class="bg-light textBox col-sm-7 offset-sm-2" *ngFor="let posts of data">
 
-            <h1 class="text-info text-center mt-2">Contact me here section coming soon!!</h1>
-
+            <app-chat-form></app-chat-form>
         </article>
 
     </div>
