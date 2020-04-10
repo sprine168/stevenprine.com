@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ajax } from 'rxjs/ajax';
+import { Injectable } from '@angular/core';
 
 // Sub module imports
 import { ChatFormComponent } from './chat-form/chat-form.component';
