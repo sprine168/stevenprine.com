@@ -1,11 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ajax } from 'rxjs/ajax';
-import { Injectable } from '@angular/core';
-
-// Sub module imports
-import { ChatFormComponent } from './chat-form/chat-form.component';
-import { LiveChatFormComponent } from './live-chat-form/live-chat-form.component';
-
 
 @Component({
   selector: 'app-contact',
@@ -19,14 +12,6 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-
-    const getData = ajax('https://www.stevenprine.com/v1/api/chat');
-
-    getData.subscribe(response => {
-       this.data = response.response;
-    });
-
-  }
+  ngOnInit(): void { }
 
 }

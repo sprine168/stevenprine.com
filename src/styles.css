@@ -22,3 +22,7 @@ html {
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }	
+
+.background {
+    background-color: #001d37;
+}

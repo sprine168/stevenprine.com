@@ -1,4 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+declare var gtag;
 
 @Component({
   selector: 'app-root',
@@ -7,5 +11,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
   
 export class AppComponent {
-  title = 'Personal Website';
+  title = 'Steven Prine';
+  constructor(router: Router) {
+    const navEndEvents = router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    );
+    navEndEvents.subscribe((event: NavigationEnd) => {
+      gtag('config', 'UA-163627892-2', {
+        'page_path': event.urlAfterRedirects
+      });
+    });
+  }
 }

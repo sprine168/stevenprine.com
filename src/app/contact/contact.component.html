@@ -1,29 +1,22 @@
-<section class="container mt-5 mb-5">
-
-    <div class="row">
-
-        <article class="col-md-4 bg-light textBox border mr-2 mb-5" *ngFor="let posts of data">
-
-            <div class="bg-primary rounded mt-1 mb-5 text-light">
-                <!-- Chat Name Badges -->
-                <p class="badge badge-secondary p-2 m-2">
-                    {{ posts.Name }}
-                </p>
-
-                <!-- Chat text people enter -->
-                <p class="ml-3 direction">{{ posts.Chat }}</p>
-                <p class="time">{{ posts.CreatedAt | date:'EEEE h:mm' }}</p>
-            </div>
-
-            <!-- <app-live-chat-form></app-live-chat-form> -->
-
-        </article>
-
-        <article class="bg-light textBox col-md-7 mr-2" *ngFor="let posts of data">
-
-            <app-chat-form></app-chat-form>
-        </article>
-
+<section>
+    <div class="container mt-5 mb-5">
+        <p class="ml-5">This real time chat is being used on heroku
+            <br>
+            Powered by Socket.IO
+        </p>
+        <div class="row">
+            <iframe class="col-md-12 bg-light textBox border mb-5"
+                src="https://cherry-cobbler-88087.herokuapp.com/">
+            </iframe>
+        </div>
     </div>
+</section>
 
+<section>
+    <div class="container">
+        <p class="ml-5">Using a PHP Rest API and Angular 9 to send email asynchronously</p>
+        <div class="bg-light textBox col-md-12 mr-2">
+            <app-chat-form></app-chat-form>
+        </div>
+    </div>
 </section>
