@@ -6,8 +6,12 @@
 
 .headingFont {
     font-family: googleFont;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
