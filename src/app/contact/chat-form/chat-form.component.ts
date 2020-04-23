@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm, EmailValidator } from '@angular/forms';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -10,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ChatFormComponent {
 
+  responseMessage;
+
   constructor(private http: HttpClient) { }
 
   private url: string = "http://stevenprine.com/v1/api/chat/";
@@ -19,9 +20,10 @@ export class ChatFormComponent {
     console.log(name);
     this.http.post(
       this.url,
-      postData
+      postData,
+      { responseType: 'text' }
     ).subscribe(responseData => {
-      console.log(responseData);
+      this.responseMessage = responseData;
     })
   }
 
