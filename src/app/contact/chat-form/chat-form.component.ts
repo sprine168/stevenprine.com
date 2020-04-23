@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -8,12 +9,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./chat-form.component.css']
 })
 export class ChatFormComponent {
+  @ViewChild('form') form: NgForm;
+  name = '';
+  email = '';
+  subject = '';
+  message = '';
 
-  responseMessage;
+  public responseMessage = "";
 
   constructor(private http: HttpClient) { }
 
-  private url: string = "http://stevenprine.com/v1/api/chat/";
+  private url: string = "https://stevenprine.com/v1/api/chat/";
 
 
   postData(postData: { name, email, subject, message }) {
@@ -24,7 +30,12 @@ export class ChatFormComponent {
       { responseType: 'text' }
     ).subscribe(responseData => {
       this.responseMessage = responseData;
-    })
+    });
   }
+
+  onSubmit() {
+    this.form.reset();
+  }
+
 
 }

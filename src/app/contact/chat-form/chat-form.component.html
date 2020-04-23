@@ -2,13 +2,13 @@
     <div class="row bg-light p-5">
 
         <div class="col-sm-8 mb-3">
-            <form (ngSubmit)="postData(form.value)" #form="ngForm">
+            <form (ngSubmit)="postData(form.value)" (ngSubmit)="onSubmit()" #form="ngForm">
 
                 <!-- New Row -->
                 <div class="row mb-3">
 
                     <div class="col-sm-6">
-                        <label for="name" class="">Your name</label>
+                        <label for="name">Your name</label>
                         <input 
                             maxlength="125"
                             pattern="^[a-zA-Z\s]+$"
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="email" class="">Your email</label>
+                        <label for="email">Your email</label>
                         <input 
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                             maxlength="200"
