@@ -1,0 +1,15 @@
+.textBox {
+    flex-direction: column-reverse;
+    overflow-y: scroll; 
+    max-height: 550px;
+    overflow: auto;
+    min-height: 500px;
+}
+
+.time {
+    font-size: 11px;
+    text-align: right;
+    margin-top: -10px;
+    margin-right: 15px;
+    color: royalblue;
+}
