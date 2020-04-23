@@ -1,116 +1,116 @@
-<section>
+<div class="container">
+    <div class="row bg-light">
 
-    <p class="text-center mb-5">Please do not hesitate to contact me
-        directly. I will try and get back with you as soon as possible.
+        <div class="col-sm-8 mb-3">
+            <form (ngSubmit)="postData(form.value)" #form="ngForm">
 
-        <div class="row">
+                <!-- New Row -->
+                <div class="row mb-3">
 
-            <div class="col-sm-8 mb-3">
-                <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-
-                    <!-- New Row -->
-                    <div class="row mb-3">
-
-                        <div class="col-sm-6">
-                            <label for="name" class="">Your name</label>
-                            <input 
-                                maxlength="125"
-                                pattern="^[a-zA-Z\s]+$"
-                                required 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form-control" 
-                                ngModel
-                                title="Please Enter your Name (numbers not allowed)"
-                                #name="ngModel"
-                                >
-                                <span class="invalidInput" *ngIf="!name.valid && name.touched">Please enter a valid name</span>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <label for="email" class="">Your email</label>
-                            <input 
-                                maxlength="200"
-                                required 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-control"
-                                ngModel
-                                email
-                                #email="ngModel"
-                                >
-                                <span class="invalidInput" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
-                            </div>
-
+                    <div class="col-sm-6">
+                        <label for="name" class="">Your name</label>
+                        <input 
+                            maxlength="125"
+                            pattern="^[a-zA-Z\s]+$"
+                            required 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-control" 
+                            ngModel
+                            title="Please Enter your Name (numbers not allowed)"
+                            #name="ngModel"
+                            >
+                            <span class="invalidInput" *ngIf="!name.valid && name.touched">Please enter a valid name</span>
                     </div>
 
-                    <!-- New Row -->
-                    <div class="row mb-3">
-
-                        <div class="col-sm-12">
-                            <label for="subject" class="ml-2">Subject</label>
-                            <input 
-                                maxlength="150"
-                                required 
-                                type="text" 
-                                id="subject" 
-                                name="subject" 
-                                class="form-control" 
-                                ngModel
-                                #subject="ngModel"
-                                >
-                                <span class="invalidInput"  *ngIf="!subject.valid && subject.touched">Please enter a subject</span>
+                    <div class="col-sm-6">
+                        <label for="email" class="">Your email</label>
+                        <input 
+                            maxlength="200"
+                            required 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-control"
+                            ngModel
+                            email
+                            #email="ngModel"
+                            >
+                            <span class="invalidInput" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
                         </div>
+
+                </div>
+
+                <!-- New Row -->
+                <div class="row mb-3">
+
+                    <div class="col-sm-12">
+                        <label for="subject" class="ml-2">Subject</label>
+                        <input 
+                            maxlength="150"
+                            required 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            class="form-control" 
+                            ngModel
+                            #subject="ngModel"
+                            >
+                            <span class="invalidInput"  
+                                *ngIf="!subject.valid && subject.touched">Please enter a subject
+                            </span>
                     </div>
+                </div>
 
-                    <!-- New Row -->
-                    <div class="row">
+                <!-- New Row -->
+                <div class="row">
 
-                        <div class="col-sm-12 mb-5">
-                            <label class="ml-2" for="message">Your message</label>
-                            <textarea 
-                                maxlength="500"
-                                required 
-                                type="text" 
-                                id="message" 
-                                name="message" 
-                                rows="3" 
-                                ngModel
-                                #message="ngModel"
-                                class="form-control"></textarea>
-                                <span class="invalidInput"  *ngIf="!message.valid && message.touched">Please enter a message</span>
+                    <div class="col-sm-12 mb-5">
+                        <label class="ml-2" for="message">Your message</label>
+                        <textarea 
+                            maxlength="500"
+                            required 
+                            type="text" 
+                            id="message" 
+                            name="message" 
+                            rows="3" 
+                            ngModel
+                            #message="ngModel"
+                            class="form-control"></textarea>
+                            <span class="invalidInput"  
+                                *ngIf="!message.valid && message.touched">Please enter a message
+                            </span>
 
-                                
-                        </div>
+                            
                     </div>
+                </div>
 
-                    <button
-                        [disabled]="!f.valid" 
-                        class="btn btn-outline-primary justify-content-center ml-2">Submit</button>
+                <button
+                    type="submit"
+                    [disabled]="!form.valid" 
+                    class="btn btn-outline-primary justify-content-center ml-2">Submit</button>
 
-                </form>
-
-            </div>
-
-            <!-- My Contact Information -->
-            <div class="col-sm-4">
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <p>
-                            <strong>Contact Information:</strong>
-                        </p>
-                    </li>
-                    <li>
-                        <p><a href="tel:+18166897463">(816) 689-7463</a></p>
-                    </li>
-                    <li>
-                        <p><a href="mailto:steven@stevenprine.com">steven@stevenprine.com</a></p>
-                    </li>
-                </ul>
-            </div>
+            </form>
 
         </div>
 
-</section>
+        <!-- My Contact Information -->
+        <div class="col-sm-4 mt-5">
+            <ul class="list-unstyled mb-0">
+                <li>
+                    <p>
+                        <strong>Contact Information:</strong>
+                    </p>
+                </li>
+                <li>
+                    <p><a href="tel:+18166897463">(816) 689-7463</a></p>
+                </li>
+                <li>
+                    <p><a href="mailto:steven@stevenprine.com">steven@stevenprine.com</a></p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
