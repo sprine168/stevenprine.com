@@ -14,7 +14,8 @@ import { ChatFormComponent } from './contact/chat-form/chat-form.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-const config: SocketIoConfig = { url: 'https://cherry-cobbler-88087.herokuapp.com', options: {}  };
+// config is used for communication with heroku server
+const config: SocketIoConfig = { url: 'https://cherry-cobbler-88087.herokuapp.com', options: {} };
 
 
 @NgModule({

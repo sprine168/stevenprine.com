@@ -1,26 +1,48 @@
-<section class="">
+<section>
 
-    <h2 class="font-weight-bold text-center ">Contact Me -- Coming Soon</h2>
     <p class="text-center mb-5">Please do not hesitate to contact me
         directly. I will try and get back with you as soon as possible.
 
         <div class="row">
 
-            <div class="col-sm-8 mb-5">
-                <form id="email-form" name="email-form">
+            <div class="col-sm-8 mb-3">
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm">
 
                     <!-- New Row -->
                     <div class="row mb-3">
 
                         <div class="col-sm-6">
                             <label for="name" class="">Your name</label>
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input 
+                                maxlength="125"
+                                pattern="^[a-zA-Z\s]+$"
+                                required 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-control" 
+                                ngModel
+                                title="Please Enter your Name (numbers not allowed)"
+                                #name="ngModel"
+                                >
+                                <span class="invalidInput" *ngIf="!name.valid && name.touched">Please enter a valid name</span>
                         </div>
 
                         <div class="col-sm-6">
                             <label for="email" class="">Your email</label>
-                            <input type="text" id="email" name="email" class="form-control">
-                        </div>
+                            <input 
+                                maxlength="200"
+                                required 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-control"
+                                ngModel
+                                email
+                                #email="ngModel"
+                                >
+                                <span class="invalidInput" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+                            </div>
 
                     </div>
 
@@ -29,7 +51,17 @@
 
                         <div class="col-sm-12">
                             <label for="subject" class="ml-2">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control">
+                            <input 
+                                maxlength="150"
+                                required 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="form-control" 
+                                ngModel
+                                #subject="ngModel"
+                                >
+                                <span class="invalidInput"  *ngIf="!subject.valid && subject.touched">Please enter a subject</span>
                         </div>
                     </div>
 
@@ -38,11 +70,25 @@
 
                         <div class="col-sm-12 mb-5">
                             <label class="ml-2" for="message">Your message</label>
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control"></textarea>
+                            <textarea 
+                                maxlength="500"
+                                required 
+                                type="text" 
+                                id="message" 
+                                name="message" 
+                                rows="3" 
+                                ngModel
+                                #message="ngModel"
+                                class="form-control"></textarea>
+                                <span class="invalidInput"  *ngIf="!message.valid && message.touched">Please enter a message</span>
+
+                                
                         </div>
                     </div>
 
-                    <!-- <button disabled class="btn btn-outline-primary justify-content-center ml-2">Submit</button> -->
+                    <button
+                        [disabled]="!f.valid" 
+                        class="btn btn-outline-primary justify-content-center ml-2">Submit</button>
 
                 </form>
 

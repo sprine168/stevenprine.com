@@ -1,0 +1,16 @@
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid.ng-touched:not(form)  {
+    border-bottom: 2px solid #7c0d05; /* red */
+}
+
+input, textarea {
+    border: 1px solid #072849;
+}
+
+.invalidInput {
+    color: #661c16;
+    margin-left: 10px;
+}
