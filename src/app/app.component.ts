@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -9,9 +9,30 @@ declare var gtag;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-  
+
 export class AppComponent {
   title = 'Steven Prine';
+
+  // for cursor
+  top: any;
+  left: any;
+  expand = false;
+
+  @HostListener('document:click', ['$event'])
+  onClick($event) {
+    this.expand = true;
+    setTimeout(() => {
+      this.expand = false;
+    }, 500)
+  }
+
+  @HostListener('document:mousemove', ['$event'])
+  onMousemove($event) {
+    this.top = ($event.pageY - 10) + "px";
+    this.left = ($event.pageX - 10) + "px";
+  }
+
+
   constructor(router: Router) {
     const navEndEvents = router.events.pipe(
       filter(event => event instanceof NavigationEnd),
@@ -21,5 +42,9 @@ export class AppComponent {
         'page_path': event.urlAfterRedirects
       });
     });
-  }
+
+  } //endConstructor;
+
+
+
 }
