@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row bg-light p-5">
+    <div class="row bg-light p-5">     
 
         <div class="col-sm-8 mb-3">
             <form (ngSubmit)="postData(form.value)" (ngSubmit)="onSubmit()" #form="ngForm">
@@ -8,7 +8,7 @@
                 <div class="row mb-3">
 
                     <div class="col-sm-6">
-                        <label for="name">Your name</label>
+                        <label for="name">Your name *</label>
                         <input 
                             maxlength="125"
                             pattern="^[a-zA-Z\s]+$"
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="email">Your email</label>
+                        <label for="email">Your email *</label>
                         <input 
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                             maxlength="200"
@@ -45,7 +45,7 @@
                 <div class="row mb-3">
 
                     <div class="col-sm-12">
-                        <label for="subject" class="ml-2">Subject</label>
+                        <label for="subject" class="ml-2">Subject *</label>
                         <input 
                             maxlength="150"
                             required 
@@ -66,7 +66,7 @@
                 <div class="row">
 
                     <div class="col-sm-12 mb-5">
-                        <label class="ml-2" for="message">Your message</label>
+                        <label class="ml-2" for="message">Your message *</label>
                         <textarea 
                             maxlength="500"
                             required 
@@ -89,6 +89,7 @@
                     type="submit"
                     [disabled]="!form.valid" 
                     class="btn btn-outline-primary justify-content-center ml-2">Submit</button>
+                    <p class="float-right text-muted h6">* required</p>
 
             </form>
 

@@ -30,3 +30,40 @@ html {
 .background {
     background-color: #001d37;
 }
+
+/* Removing standard link styling  */
+.textLink {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.indent {
+    text-indent: 35px;
+}
+
+.headings {
+    color:  #003366;
+    border-bottom: #003366 solid 1.5px;
+    border-right: #003366 solid 2.75px;
+    border-left: #003366 solid 2.75px;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.doubleSpace {
+    line-height: 1.75;
+}
+
+img:hover { 
+    padding: .5px;
+    box-shadow: 1.5px 2px black;
+}
+
+.textLink:hover{
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.justify {
+    text-align: justify;
+}

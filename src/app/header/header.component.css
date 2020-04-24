@@ -22,3 +22,8 @@ a {
 .align-right {
   justify-content: flex-end;
 }
+
+.hover:hover {
+  color: white !important;
+  background-color: transparent;
+}
