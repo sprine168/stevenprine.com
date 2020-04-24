@@ -15,7 +15,6 @@ import { ChatFormComponent } from './contact/chat-form/chat-form.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
-import { PermissionComponent } from './permission/permission.component';
 
 // config is used for communication with heroku server
 const config: SocketIoConfig = { url: 'https://cherry-cobbler-88087.herokuapp.com', options: {} };
@@ -32,7 +31,6 @@ const config: SocketIoConfig = { url: 'https://cherry-cobbler-88087.herokuapp.co
     HeaderComponent,
     FooterComponent,
     ChatRoomComponent,
-    PermissionComponent,
   ],
   imports: [
     BrowserModule,
