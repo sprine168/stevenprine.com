@@ -1,5 +1,5 @@
 .activeStyle  {
-  border-bottom: 1.5px solid rgb(5, 136, 252);
+  border-bottom: 1px solid rgb(5, 136, 252);
   color: aliceblue;
 }
 
@@ -22,8 +22,14 @@ a {
   justify-content: flex-end;
 }
 
+.hover {
+  transition: navBorder 0.5s linear
+}
+
 .hover:hover {
   color: aliceblue !important;
+  border-bottom: 1px solid rgb(5, 136, 252);
   background-color: transparent;
-  border-bottom: 1.5px solid rgb(5, 136, 252);
+  position: relative;
+  transition: border-bottom .4s linear;
 }
