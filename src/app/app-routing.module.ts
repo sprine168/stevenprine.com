@@ -12,12 +12,14 @@ import { ChatRoomComponent } from './chat-room/chat-room.component';
 // End Imports for routing section
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'about', component: HomeComponent },
   { path: 'resume', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'chat_room', component: ChatRoomComponent },
   { path: '**', component: PageNotFoundComponent },
+  { path: '404', component: PageNotFoundComponent },
+
 ];
 
 @NgModule({

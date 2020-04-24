@@ -54,10 +54,6 @@ html {
     line-height: 1.75;
 }
 
-img:hover { 
-    padding: .5px;
-    box-shadow: 1.5px 2px black;
-}
 
 .textLink:hover{
     color: dodgerblue;
@@ -66,4 +62,8 @@ img:hover {
 
 .justify {
     text-align: justify;
+}
+
+a, a:hover {
+    text-decoration: none;
 }

@@ -1,16 +1,15 @@
 .activeStyle  {
   border-bottom: 1.5px solid rgb(5, 136, 252);
-  color: white;
-  border-top: 1.5px solid rgb(5, 136, 252);
+  color: aliceblue;
 }
 
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
 
@@ -24,6 +23,7 @@ a {
 }
 
 .hover:hover {
-  color: white !important;
+  color: aliceblue !important;
   background-color: transparent;
+  border-bottom: 1.5px solid rgb(5, 136, 252);
 }
