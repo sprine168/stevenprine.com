@@ -3,7 +3,7 @@
     overflow-y: scroll; 
     max-height: 550px;
     overflow: auto;
-    min-height: 487px;
+    min-height: 486px;
 }
 
 .time {
@@ -12,4 +12,8 @@
     margin-top: -10px;
     margin-right: 15px;
     color: royalblue;
+}
+
+.loadingFrame {
+    background:url(../../assets/Images/loader.gif) center center no-repeat;
 }
