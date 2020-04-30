@@ -1,8 +1,15 @@
 .activeStyle  {
   border-bottom: 1px solid rgb(5, 136, 252);
   color: aliceblue;
-}ng 
+} 
 
+.logo {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 34px;
+  width: 250px;
+  padding-top: 15px;
+
+}
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
@@ -27,9 +34,9 @@ a {
 }
 
 .hover:hover {
-  color: aliceblue !important;
-  border-bottom: 1px solid rgb(5, 136, 252);
+  color: black !important;
+  border-bottom: 1px solid rgb(57, 127, 189);
   background-color: transparent;
   position: relative;
-  transition: border-bottom .4s linear;
+  transition: border-bottom .5s linear;
 }

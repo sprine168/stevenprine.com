@@ -1,9 +1,12 @@
 .ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid #42A948; /* green */
+    border-bottom: 5px solid #42A948; /* green */
 }
 
 .ng-invalid.ng-touched:not(form)  {
-    border-bottom: 2px solid #7c0d05; /* red */
+    border-top: 1px solid #7c0d05; /* red */;
+    border-bottom: 5px solid #7c0d05; /* red */
+    border-left: 1px solid #7c0d05;
+    border-right: 1px solid #7c0d05;
 }
 
 input, textarea {
