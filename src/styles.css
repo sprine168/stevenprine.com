@@ -29,7 +29,7 @@ html {
 }	
 
 .background {
-    background-color: white;
+    background-color: #003366;
 }
 
 /* Removing standard link styling  */
@@ -44,9 +44,6 @@ html {
 
 .headings {
     color:  #003366;
-    border-bottom: #003366 solid 1.5px;
-    border-right: #003366 solid 2.75px;
-    border-left: #003366 solid 2.75px;
     padding: 5px;
     padding-left: 15px;
 }

@@ -1,14 +1,12 @@
-.activeStyle  {
-  border-bottom: 1px solid rgb(5, 136, 252);
-  color: aliceblue;
-} 
+
 
 .logo {
   font-family: "Times New Roman", Times, serif;
   font-size: 34px;
   width: 250px;
   padding-top: 15px;
-
+  word-spacing: 3px;
+  color: white;
 }
 
 @media screen and (max-height: 450px) {
@@ -29,14 +27,15 @@ a {
   justify-content: flex-end;
 }
 
-.hover {
-  transition: navBorder 0.5s linear
-}
+.activeStyle  {
+  border-bottom: 2px solid rgb(5, 136, 252);
+  color: rgb(158, 147, 229);
+} 
 
 .hover:hover {
-  color: black !important;
-  border-bottom: 1px solid rgb(57, 127, 189);
+  color: white !important;
+  border-bottom: 2px solid rgb(5, 136, 252);
   background-color: transparent;
   position: relative;
-  transition: border-bottom .5s linear;
-}
+} 
+/* End nav styles for header*/
