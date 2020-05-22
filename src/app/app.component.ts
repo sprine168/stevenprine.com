@@ -2,6 +2,8 @@ import { Component, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 declare var gtag;
 
 @Component({

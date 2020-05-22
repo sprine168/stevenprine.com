@@ -9,7 +9,13 @@
     font-size: 24px;
 }
 
+h1 {
+    font-weight: 700;
+}
+
 h2 {
+    display: block;
+    font-size: 35px;
     font-weight: 400;
 }
 
@@ -38,7 +44,7 @@ html {
 /* Removing standard link styling  */
 .textLink {
     text-decoration: none;
-    color: darkblue;
+    color: rgb(0, 140, 255);
 }
 
 .indent {
@@ -57,7 +63,7 @@ html {
 
 
 .textLink:hover{
-    color: dodgerblue;
+    color: rgb(0, 57, 104);
     text-decoration: none;
 }
 

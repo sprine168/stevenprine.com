@@ -17,3 +17,14 @@ input, textarea {
     color: #661c16;
     margin-left: 10px;
 }
+
+.visible {
+    animation-name: removeAlert;
+    animation-duration: 5s;
+    opacity: 0;
+}
+
+@keyframes removeAlert { 
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+}

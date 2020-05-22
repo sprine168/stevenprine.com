@@ -1,7 +1,8 @@
-<main class="container">
-    <div class="row">     
+<main class="container form shadow-lg bg-white rounded p-5 mb-5">
 
-        <div class="col-sm-12 mb-3">
+    <section class="row">
+
+        <div class="col-sm-12">
             <form (ngSubmit)="postData(form.value)" (ngSubmit)="onSubmit()" #form="ngForm">
 
                 <!-- New Row -->
@@ -9,36 +10,19 @@
 
                     <div class="col-sm-6">
                         <label for="name">Name *</label>
-                        <input 
-                            maxlength="125"
-                            pattern="^[a-zA-Z\s]+$"
-                            required 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            class="form-control" 
-                            ngModel
-                            title="Please Enter your Name (numbers not allowed)"
-                            #name="ngModel"
-                            >
-                            <span class="invalidInput" *ngIf="!name.valid && name.touched">Please enter a valid name</span>
+                        <input maxlength="125" pattern="^[a-zA-Z\s]+$" required type="text" id="name" name="name"
+                            class="form-control" ngModel title="Please Enter your Name (numbers not allowed)"
+                            #name="ngModel">
+                        <span class="invalidInput" *ngIf="!name.valid && name.touched">Please enter a valid name</span>
                     </div>
 
                     <div class="col-sm-6">
                         <label for="email">Email *</label>
-                        <input 
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                            maxlength="200"
-                            required 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="form-control"
-                            ngModel
-                            #email="ngModel"
-                            >
-                            <span class="invalidInput" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
-                        </div>
+                        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="200" required type="email"
+                            id="email" name="email" class="form-control" ngModel #email="ngModel">
+                        <span class="invalidInput" *ngIf="!email.valid && email.touched">Please enter a valid
+                            email</span>
+                    </div>
                 </div>
 
                 <!-- New Row -->
@@ -46,19 +30,10 @@
 
                     <div class="col-sm-12">
                         <label for="subject" class="ml-2">Subject *</label>
-                        <input 
-                            maxlength="150"
-                            required 
-                            type="text" 
-                            id="subject" 
-                            name="subject" 
-                            class="form-control" 
-                            ngModel
-                            #subject="ngModel"
-                            >
-                            <span class="invalidInput"  
-                                *ngIf="!subject.valid && subject.touched">Please enter a subject
-                            </span>
+                        <input maxlength="150" required type="text" id="subject" name="subject" class="form-control"
+                            ngModel #subject="ngModel">
+                        <span class="invalidInput" *ngIf="!subject.valid && subject.touched">Please enter a subject
+                        </span>
                     </div>
                 </div>
 
@@ -67,34 +42,24 @@
 
                     <div class="col-sm-12 mb-5">
                         <label class="ml-2" for="message">Message *</label>
-                        <textarea 
-                            maxlength="500"
-                            required 
-                            type="text" 
-                            id="message" 
-                            name="message" 
-                            rows="3" 
-                            ngModel
-                            #message="ngModel"
-                            class="form-control"></textarea>
-                            <span class="invalidInput"  
-                                *ngIf="!message.valid && message.touched">Please enter a message
-                            </span>                          
+                        <textarea maxlength="500" required type="text" id="message" name="message" rows="3" ngModel
+                            #message="ngModel" class="form-control"></textarea>
+                        <span class="invalidInput" *ngIf="!message.valid && message.touched">Please enter a message
+                        </span>
                     </div>
                 </div>
 
-                <p *ngIf="responseMessage.length > 0" class="alert alert-success text-center">{{ responseMessage }}</p>
+                <p *ngIf="responseMessage == 'A problem occurred sending the email'" class="alert alert-danger text-center visible">{{ responseMessage }}</p>
+                <p *ngIf="responseMessage.length > 0" class="alert alert-success text-center visible">{{ responseMessage }}</p>
 
-                <button
-                    type="submit"
-                    [disabled]="!form.valid" 
+                <button type="submit" [disabled]="!form.valid"
                     class="btn btn-outline-primary justify-content-center ml-2">Submit</button>
-                    <p class="float-right text-muted h6">* required</p>
+                <p class="float-right text-muted h6">* required</p>
 
             </form>
 
         </div>
-    
-    </div>
+
+    </section>
 
 </main>

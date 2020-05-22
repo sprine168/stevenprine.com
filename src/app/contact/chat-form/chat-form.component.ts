@@ -24,18 +24,20 @@ export class ChatFormComponent {
 
   postData(postData: { name, email, subject, message }) {
     console.log(name);
+
     this.http.post(
       this.url,
       postData,
       { responseType: 'text' }
-    ).subscribe(responseData => {
-      this.responseMessage = responseData;
-    });
+    )
+      .subscribe(responseData => {
+        this.responseMessage = responseData;
+      });
+
   }
 
   onSubmit() {
     this.form.reset();
   }
-
 
 }
