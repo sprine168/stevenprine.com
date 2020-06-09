@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'about', component: HomeComponent },
   { path: 'resume', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'chat_room', component: ChatRoomComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
